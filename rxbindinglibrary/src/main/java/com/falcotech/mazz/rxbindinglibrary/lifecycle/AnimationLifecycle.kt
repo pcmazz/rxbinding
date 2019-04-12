@@ -1,4 +1,4 @@
-package com.falcotech.mazz.rxbindinglibrary
+package com.falcotech.mazz.rxbindinglibrary.lifecycle
 
 object AnimationLifecycle {
     val START = 0

@@ -1,7 +1,8 @@
-package com.falcotech.mazz.rxbindinglibrary
+package com.falcotech.mazz.rxbindinglibrary.observable
 
 import android.util.Log
 import com.falcotech.mazz.promiselibrary.Promise
+import com.falcotech.mazz.rxbindinglibrary.core.BackgroundDisposable
 import io.reactivex.Observable
 import io.reactivex.Observer
 import kotlinx.coroutines.*
@@ -10,12 +11,6 @@ import kotlin.coroutines.CoroutineContext
 class PromiseObservable<T>(private val promise: Promise<T>) : Observable<T>(){
 
     private lateinit var listener: Listener<T>
-
-    fun execute(){
-        listener.execute()
-    }
-
-
     override fun subscribeActual(observer: Observer<in T>) {
         listener = Listener(promise, observer)
         observer.onSubscribe(listener)

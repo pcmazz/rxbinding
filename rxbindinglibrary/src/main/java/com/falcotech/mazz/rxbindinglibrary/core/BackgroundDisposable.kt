@@ -1,4 +1,4 @@
-package com.falcotech.mazz.rxbindinglibrary
+package com.falcotech.mazz.rxbindinglibrary.core
 
 import android.os.Looper
 import io.reactivex.disposables.Disposable

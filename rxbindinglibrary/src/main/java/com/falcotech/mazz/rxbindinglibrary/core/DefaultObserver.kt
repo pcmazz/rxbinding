@@ -1,4 +1,4 @@
-package com.falcotech.mazz.rxbindinglibrary
+package com.falcotech.mazz.rxbindinglibrary.core
 
 import io.reactivex.observers.DisposableObserver
 

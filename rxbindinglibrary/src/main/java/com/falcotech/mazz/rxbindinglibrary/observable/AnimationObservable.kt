@@ -1,6 +1,7 @@
-package com.falcotech.mazz.rxbindinglibrary
+package com.falcotech.mazz.rxbindinglibrary.observable
 
 import android.view.animation.Animation
+import com.falcotech.mazz.rxbindinglibrary.lifecycle.AnimationLifecycle
 import io.reactivex.Observable
 import io.reactivex.Observer
 import io.reactivex.android.MainThreadDisposable

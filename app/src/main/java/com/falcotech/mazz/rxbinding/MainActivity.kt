@@ -5,8 +5,8 @@ import android.os.Bundle
 import android.util.Log
 import com.falcotech.mazz.promiselibrary.PromiseUtils
 import com.falcotech.mazz.promiselibrary.then
-import com.falcotech.mazz.rxbindinglibrary.DefaultObserver
-import com.falcotech.mazz.rxbindinglibrary.PromiseObservable
+import com.falcotech.mazz.rxbindinglibrary.core.DefaultObserver
+import com.falcotech.mazz.rxbindinglibrary.observable.PromiseObservable
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_main.*
 
