@@ -45,6 +45,7 @@ ext {
     firebase_firestore_version = '18.2.0'
     firebase_core_version = '16.0.8'
     firebase_functions_version = '16.3.0'
+    coroutines_version = '1.1.0'
     junit_version = '4.12'
     runner_version = '1.1.0-alpha4'
     espress_core_version = '3.1.0-alpha4'
