@@ -5,6 +5,7 @@ import android.view.View
 import android.view.animation.Animation
 import com.falcotech.mazz.promiselibrary.Promise
 import com.falcotech.mazz.rxbindinglibrary.observable.*
+import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.Query
 import com.google.firebase.functions.HttpsCallableReference
@@ -24,9 +25,11 @@ object RxUtils {
         FirestoreUpdateDocObservable(documentReference, data)
     fun bindFirestoreSetDoc(documentReference: DocumentReference, data: Any): Observable<BT_ServerResponse> =
         FirestoreSetDocObservable(documentReference, data)
+    fun bindFirestoreAddDoc(collectionReference: CollectionReference, data: Any): Observable<BT_ServerResponse> =
+        FirestoreAddDocObservable(collectionReference, data)
     fun bindFunctionsCall(callableReference: HttpsCallableReference, data: HashMap<*, *>): Observable<BT_ServerResponse> =
         FunctionsCallObservable(callableReference, data)
-    fun bindFirstoryQuery(query: Query): Observable<BT_ServerResponse> =
+    fun bindFirestoreQuery(query: Query): Observable<BT_ServerResponse> =
         FirestoreQueryObservable(query)
     fun <T> bindPromise(promise: Promise<T>): Observable<T> =
         PromiseObservable(promise)

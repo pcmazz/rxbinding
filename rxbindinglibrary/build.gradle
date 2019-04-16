@@ -43,7 +43,7 @@ dependencies {
     implementation "com.google.firebase:firebase-functions:$firebase_functions_version"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
-    implementation 'com.github.pcmazz:promise:1.0.4'
+    implementation "com.github.pcmazz:promise:$promise_version"
 
     testImplementation "junit:junit:$junit_version"
     androidTestImplementation "androidx.test:runner:$runner_version"

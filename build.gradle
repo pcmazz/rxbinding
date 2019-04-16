@@ -33,7 +33,7 @@ ext {
     minSdkVersion = 28
     compileSdkVersion = targetSdkVersion
     libVersionCode = 1
-    libVersionName = '1.0.0'
+    libVersionName = '1.0.1'
 
 
     //Dependencies
@@ -49,4 +49,5 @@ ext {
     junit_version = '4.12'
     runner_version = '1.1.0-alpha4'
     espress_core_version = '3.1.0-alpha4'
+    promise_version = '1.0.5'
 }
