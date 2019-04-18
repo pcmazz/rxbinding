@@ -5,14 +5,19 @@ import com.falcotech.mazz.rxbindinglibrary.core.BackgroundDisposable
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.Task
 import com.google.firebase.firestore.DocumentReference
+import com.google.firebase.firestore.SetOptions
 import io.reactivex.Observable
 import io.reactivex.Observer
 
-class FirestoreSetDocObservable(private val docRef: DocumentReference, private val data: Any) : Observable<BT_ServerResponse>(){
+class FirestoreSetDocObservable(private val docRef: DocumentReference, private val data: Any, private val merge: Boolean) : Observable<BT_ServerResponse>(){
     override fun subscribeActual(observer: Observer<in BT_ServerResponse>) {
         val listener = Listener(observer)
         observer.onSubscribe(listener)
-        docRef.set(data).addOnCompleteListener(listener)
+        if(merge){
+            docRef.set(data, SetOptions.merge()).addOnCompleteListener(listener)
+        }else{
+            docRef.set(data).addOnCompleteListener(listener)
+        }
     }
 
     internal class Listener(private val observer: Observer<in BT_ServerResponse>): BackgroundDisposable(),

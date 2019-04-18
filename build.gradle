@@ -8,7 +8,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.3.2'
+        classpath 'com.android.tools.build:gradle:3.4.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
     }
@@ -33,7 +33,7 @@ ext {
     minSdkVersion = 28
     compileSdkVersion = targetSdkVersion
     libVersionCode = 1
-    libVersionName = '1.0.1'
+    libVersionName = '1.0.2'
 
 
     //Dependencies
@@ -49,5 +49,5 @@ ext {
     junit_version = '4.12'
     runner_version = '1.1.0-alpha4'
     espress_core_version = '3.1.0-alpha4'
-    promise_version = '1.0.5'
+    promise_version = '1.0.8'
 }

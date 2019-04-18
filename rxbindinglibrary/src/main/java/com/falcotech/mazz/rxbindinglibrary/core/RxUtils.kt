@@ -23,8 +23,8 @@ object RxUtils {
         FirestoreGetDocObservable(documentReference)
     fun bindFirstoreUpdateDoc(documentReference: DocumentReference, data: Map<String, Any>): Observable<BT_ServerResponse> =
         FirestoreUpdateDocObservable(documentReference, data)
-    fun bindFirestoreSetDoc(documentReference: DocumentReference, data: Any): Observable<BT_ServerResponse> =
-        FirestoreSetDocObservable(documentReference, data)
+    fun bindFirestoreSetDoc(documentReference: DocumentReference, data: Any, merge: Boolean): Observable<BT_ServerResponse> =
+        FirestoreSetDocObservable(documentReference, data, merge)
     fun bindFirestoreAddDoc(collectionReference: CollectionReference, data: Any): Observable<BT_ServerResponse> =
         FirestoreAddDocObservable(collectionReference, data)
     fun bindFunctionsCall(callableReference: HttpsCallableReference, data: HashMap<*, *>): Observable<BT_ServerResponse> =
