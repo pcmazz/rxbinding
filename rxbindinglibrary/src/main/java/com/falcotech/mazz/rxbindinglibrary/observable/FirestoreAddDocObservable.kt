@@ -36,7 +36,7 @@ class FirestoreAddDocObservable(private val collectionRef: CollectionReference, 
         }
 
         override fun onDispose() {
-            TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
         }
     }
 }
